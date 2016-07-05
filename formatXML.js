@@ -1,3 +1,7 @@
+/* 
+ * Stuart Powers - http://github.com/sente/formatXML
+ * You are free to use this code so long as you keep this attribution.
+ */
 function formatXML(xml) {
     var formatted = '';
     var reg = /(>)(<)(\/*)/g;
@@ -39,7 +43,7 @@ function test_formatXML() {
                     replace(/>/g,'&gt;').
                     replace(/ /g, '&nbsp;').
                     replace(/\n/g,'<br />');
-    var mydiv = document.createElement('div')
+    var mydiv = document.createElement('div');
     mydiv.innerHTML = xml_escaped;
     document.body.appendChild(mydiv);
 }
